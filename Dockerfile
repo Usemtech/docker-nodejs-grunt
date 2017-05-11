@@ -5,7 +5,7 @@
 #
 
 # Pull base image.
-FROM library/node
+FROM library/node:5
 MAINTAINER Usemtech <docker@usem.tech>
 
 # Install Grunt
