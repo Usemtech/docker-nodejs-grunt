@@ -10,7 +10,7 @@ MAINTAINER Usemtech <docker@usem.tech>
 
 # Install git and grunt
 RUN apk update && apk upgrade && \
-    apk add --no-cache bash git openssh \
+    apk add --no-cache bash git openssh && \
     npm install -g grunt-cli
 
 # Define working directory.
