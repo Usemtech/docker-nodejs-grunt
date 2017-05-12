@@ -5,7 +5,7 @@
 #
 
 # Pull base image.
-FROM library/node:0.10-alpine
+FROM library/node:7-alpine
 MAINTAINER Usemtech <docker@usem.tech>
 
 # Install git and grunt
