@@ -1,15 +1,17 @@
 #
-# Node.js & Grunt Dockerfile
+# Node.js, GIT and Grunt Dockerfile
 #
 # https://github.com/Usemtech/docker-nodejs-grunt
 #
 
 # Pull base image.
-FROM library/node:0.10
+FROM library/node:0.10-alpine
 MAINTAINER Usemtech <docker@usem.tech>
 
-# Install Grunt
-RUN npm install -g grunt-cli
+# Install git and grunt
+RUN apk update && apk upgrade && \
+    apk add --no-cache bash git openssh && \
+    npm install -g grunt-cli
 
 # Define working directory.
 WORKDIR /data
